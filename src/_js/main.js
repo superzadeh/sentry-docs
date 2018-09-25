@@ -33,4 +33,6 @@ $(function() {
   window.User = new User();
   window.User.init();
   $(document).trigger('page.didUpdate');
+
+  Page.logPageview();
 });

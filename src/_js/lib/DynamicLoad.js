@@ -1,4 +1,5 @@
 import { fullPath } from './Helpers';
+import Page from './Page';
 
 let currentPathName = document.location.pathname;
 
@@ -74,6 +75,7 @@ class DynamicLoader {
       // Send reload a pageview if this is a new page
       if (pathname !== location.pathname) {
         window.ra.page();
+        Page.logPageview();
         $('[data-feedback-toggle] label').removeClass('active');
       }
 
